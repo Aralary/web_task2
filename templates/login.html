@@ -1,0 +1,48 @@
+{% extends "./inc/base.html" %}
+{% block header_links %}
+<li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="./">Home</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="./">Ask</a>
+</li>
+{% endblock header_links %}
+
+{% block header_place %}
+<div class="row" style="margin: 8px;">
+    <a style="width: 64px;" href="./">log in</a>
+    <a style="width: 64px;" href="../signup">register</a>
+</div>
+{% endblock header_place %}
+
+<!-- Begin page content -->
+{% block content_side %}
+<div class="col-9 mt-5">
+    <form>
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+        <div class="form-floating">
+            <input type="email" class="form-control  login" id="floatingInput"
+                   placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control login" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+
+        <div class="checkbox mb-3" style="margin: 7px;">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <div>
+            <button class="btn btn-lg btn-primary login" type="submit">Sign in</button>
+        </div>
+        <div>
+            <button class="btn btn-lg btn-primary login" type="submit">Register</button>
+        </div>
+        <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+    </form>
+</div>
+{% endblock content_side %}

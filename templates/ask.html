@@ -1,0 +1,61 @@
+{% extends "./inc/base.html" %}
+
+{% block header_links %}
+<li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="../">Home</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="./">Ask</a>
+</li>
+{% endblock header_links %}
+
+{% block header_place %}
+<img src="../static/img/logo.jpg" class="logo_header" alt="">
+<div class="col-2">
+    <li class="nav-item">
+        <div class="login" title="your_login">Authorized user</div>
+    </li>
+    <div class="row">
+        <div class="col-5">
+            <a href="www.youtube.com">settings</a>
+        </div>
+        <div class="col-5">
+            <a href="../login">logout</a>
+        </div>
+    </div>
+</div>
+{% endblock header_place %}
+
+<!-- Begin page content -->
+{% block content_side %}
+<div class="col-9">
+    <h2 class="mt-5">New question</h2>
+    <div class="row answer">
+        <div class="col-2">
+            <div style="font-size: 170%;">Title</div>
+        </div>
+        <div class="col-10">
+            <input class="new_question_input" type="text" placeholder="Title of your question">
+        </div>
+    </div>
+    <div class="row answer">
+        <div class="col-2">
+            <div style="font-size: 170%;">Text</div>
+        </div>
+        <div class="col-10">
+                        <textarea class="new_question_t_area" placeholder="Enter your question text"
+                                  aria-label="Enter your answer here"></textarea>
+        </div>
+    </div>
+    <div class="row answer">
+        <div class="col-2">
+            <div style="font-size: 170%;">Tags</div>
+        </div>
+        <div class="col-10">
+            <input class="new_question_input" type="text" placeholder="Tags of your question">
+            <h5 style="margin: 8px; color: red;">Incorrect format of data</h5>
+            <button class="btn btn-outline-success" style="margin: 8px;" type="submit">Ask</button>
+        </div>
+    </div>
+</div>
+{% endblock content_side %}
