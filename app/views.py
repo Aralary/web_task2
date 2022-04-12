@@ -48,4 +48,4 @@ def signup(request):
 
 
 def question(request, ix: int):
-    return render(request, "question.html", {"question": QUESTIONS[ix]})
+    return render(request, "question.html", {"question": QUESTIONS[ix], "answers": ANSWERS})
