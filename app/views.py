@@ -9,8 +9,9 @@ QUESTIONS = [
         "text": f"This is text for question {i}",
         "tag1": f"tag {i + 1}",
         "tag2": f"tag {i - 1}",
-        "tag3": f"tag {i * i}"
-    } for i in range(5, 10)
+        "tag3": f"tag {i * i}",
+        "id": i
+    } for i in range(0, 5)
 ]
 
 ANSWERS = [
@@ -46,5 +47,5 @@ def signup(request):
     return render(request, "signup.html")
 
 
-def question(request):
-    return render(request, "question.html", {"answers": ANSWERS, "look_questions": LOOK_QUESTIONS})
+def question(request, ix: int):
+    return render(request, "question.html", {"question": QUESTIONS[ix]})
