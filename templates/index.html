@@ -2,10 +2,10 @@
 
 {% block header_links %}
 <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="./">Home</a>
+    <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="./ask">Ask</a>
+    <a class="nav-link" href="{% url 'ask' %}">Ask</a>
 </li>
 {% endblock header_links %}
 
@@ -20,7 +20,7 @@
             <a href="www.youtube.com">settings</a>
         </div>
         <div class="col-5">
-            <a href="./login">logout</a>
+            <a href="{% url 'login' %}">logout</a>
         </div>
     </div>
 </div>
