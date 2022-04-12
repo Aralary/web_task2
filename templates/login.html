@@ -1,18 +1,11 @@
 {% extends "./inc/base.html" %}
+
 {% block header_links %}
-<li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="{% url 'login' %}">Home</a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" href="{% url 'login' %}">Ask</a>
-</li>
+{% include "./inc/h_left_1.html" %}
 {% endblock header_links %}
 
 {% block header_place %}
-<div class="row" style="margin: 8px;">
-    <a style="width: 64px;" href="{% url 'login' %}">log in</a>
-    <a style="width: 64px;" href="{% url 'signup' %}">register</a>
-</div>
+{% include "./inc/h_right_1.html" %}
 {% endblock header_place %}
 
 <!-- Begin page content -->

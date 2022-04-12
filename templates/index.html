@@ -1,29 +1,11 @@
 {% extends "./inc/base.html"%}
 
 {% block header_links %}
-<li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" href="{% url 'ask' %}">Ask</a>
-</li>
+{% include "./inc/h_left_2.html" %}
 {% endblock header_links %}
 
 {% block header_place %}
-<img src="../static/img/logo.jpg" class="logo_header" alt="">
-<div class="col-2">
-    <li class="nav-item">
-        <div class="login" title="your_login">Authorized user</div>
-    </li>
-    <div class="row">
-        <div class="col-5">
-            <a href="www.youtube.com">settings</a>
-        </div>
-        <div class="col-5">
-            <a href="{% url 'login' %}">logout</a>
-        </div>
-    </div>
-</div>
+{% include "./inc/h_right_2.html" %}
 {% endblock header_place %}
 
 <!-- Begin page content -->
